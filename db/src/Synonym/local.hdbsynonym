@@ -1,0 +1,8 @@
+{
+    "APP_INTERACTIONS_EXT_GESTIONESCOBRANZABASICON1": {
+      "target": {
+        "object": "GESTIONESCOBRANZABASICON1",
+        "schema"     : "HDI_MAVIPOS1"
+      }
+    }
+  }

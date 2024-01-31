@@ -1,0 +1,8 @@
+{ 
+  "GESTIONESCOBRANZABASICON1" : { 
+     "target" : { 
+        "schema"     : "HDI_MAVIPOS1",        // optional
+        "object"     : "GESTIONESCOBRANZABASICON1"
+     }
+  }
+}

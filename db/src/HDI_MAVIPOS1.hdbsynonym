@@ -1,0 +1,8 @@
+{
+  "com.sap::COMENTARIOS_COB": {
+    "target": {
+      "object": "COMENTARIOS_COB",
+      "schema": "MAVIPOS"
+    }
+  }
+}

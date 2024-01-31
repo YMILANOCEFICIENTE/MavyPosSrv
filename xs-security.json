@@ -1,0 +1,43 @@
+{
+"xsappname": "myhanaapp",
+"tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Srv-Mavipos",
+      "description": "Srv-Mavipos"
+    },
+    {
+      "name": "$XSAPPNAME.Srv-Mavitest",
+      "description": "Srv-Mavitest"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Srv-Mavipos",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Srv-Mavipos"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Srv-Mavitest",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Srv-Mavitest"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+      "credential-types": [
+          "binding-secret",
+          "x509"
+      ],
+      "redirect-uris": [
+          "https://*.applicationstudio.cloud.sap/**",
+          "https://*.hana.ondemand.com/**"
+      ]
+  }
+}

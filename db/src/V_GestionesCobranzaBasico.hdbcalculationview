@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="V_GestionesCobranzaBasico" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="V_GestionesCobranzaBasico"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::COMENTARIOS_COB">
+    <resourceUri>com.sap::COMENTARIOS_COB</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ICOMENT"/>
+      <viewAttribute id="CUENTA"/>
+      <viewAttribute id="MOV"/>
+      <viewAttribute id="FACTURA"/>
+      <viewAttribute id="FECHA_INICIO"/>
+      <viewAttribute id="HORA_INICIO"/>
+      <viewAttribute id="FECHA_FINAL"/>
+      <viewAttribute id="HORA_FINAL"/>
+      <viewAttribute id="RESULTADO"/>
+      <viewAttribute id="VALOR_RESULTADO"/>
+      <viewAttribute id="PROXIMAVISITA"/>
+      <viewAttribute id="COMENTARIO"/>
+      <viewAttribute id="PAGO_PROMESA"/>
+      <viewAttribute id="PAGO_IMPORTE"/>
+      <viewAttribute id="PAGO_QUIEN"/>
+      <viewAttribute id="RECIBO"/>
+      <viewAttribute id="PROMOTOR"/>
+      <viewAttribute id="IDCOMENTARIO"/>
+      <viewAttribute id="ORIGEN"/>
+      <viewAttribute id="ESTATUS_COBRO"/>
+      <viewAttribute id="MOVID"/>
+      <viewAttribute id="USUARIO_COBRO"/>
+      <viewAttribute id="FECHA_COBRO"/>
+      <viewAttribute id="EXPORTADO"/>
+      <viewAttribute id="SANCION"/>
+      <viewAttribute id="ACTUALIZAR"/>
+      <viewAttribute id="MONTO_SANCION"/>
+      <viewAttribute id="ALERTADIMAMOTIVO"/>
+      <viewAttribute id="MOTIVOCANCELACION"/>
+      <viewAttribute id="RETROACTIVAGESTION"/>
+      <viewAttribute id="RETROACTIVATIPO"/>
+      <viewAttribute id="RETROACTIVACOMJEFE"/>
+      <viewAttribute id="RETROACTIVATIPOCLIENTE"/>
+      <viewAttribute id="RETROACTIVAIMPORTE"/>
+      <viewAttribute id="RETROACTIVAORIGENID"/>
+      <viewAttribute id="RETROACTIVAORIGEN"/>
+      <viewAttribute id="RETROACTIVAORIGENFECHA"/>
+      <viewAttribute id="PROMESAPAGOENTREGA"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="com.sap::COMENTARIOS_COB"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="Cuenta" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUENTA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CUENTA"/>
+    </attribute>
+    <attribute id="Factua" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FACTURA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FACTURA"/>
+    </attribute>
+    <attribute id="FechaInicio" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FECHA_INICIO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FECHA_INICIO"/>
+    </attribute>
+    <attribute id="Resultado" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESULTADO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESULTADO"/>
+    </attribute>
+    <attribute id="Comentario" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMENTARIO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="COMENTARIO"/>
+    </attribute>
+    <attribute id="PagoPromesa" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAGO_PROMESA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PAGO_PROMESA"/>
+    </attribute>
+    <attribute id="PagoImporte" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAGO_IMPORTE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PAGO_IMPORTE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
