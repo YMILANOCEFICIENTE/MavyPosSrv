@@ -48,9 +48,7 @@
       <viewAttribute id="RETROACTIVAIMPORTE"/>
       <viewAttribute id="RETROACTIVAORIGENID"/>
       <viewAttribute id="RETROACTIVAORIGEN"/>
-      <viewAttribute id="RETROACTIVAORIGENFECHA"/>
-      <viewAttribute id="PROMESAPAGOENTREGA"/>
-    </viewAttributes>
+      <viewAttribute id="RETROACTIVAORIGENFECHA"/></viewAttributes>
     <calculatedViewAttributes/>
     <input node="com.sap::COMENTARIOS_COB"/>
   </calculationView>

@@ -218,4 +218,141 @@ module.exports = function () {
 
   })
 
+  this.on('ExisteAsignacionCliente', async function (req) {
+
+    let dbQuery = 'CALL "HDI_MAVIPOS1"."SPCXCPRELIMINARCTECTO"(' +
+      " OPCION => '5'," +
+      ' CLIENTE => ' + "'" + req.data.Cliente + "'" + ',' +
+      '	NOMBRE => ?,' +
+      '	DIRECCION => ?,' +
+      '	TELEFONO => ?,' +
+      '	CODIGO_POSTAL => ?,' +
+      '	IDCATALOGOTARJETAS => ?,' +
+      '	REGISTROS => ?,' +
+      ' RESPUESTAOUT => ?' +
+      ' )';
+
+    let result = await cds.run(dbQuery)
+    cds.log().info(result)
+
+    let lv_registros = result.REGISTROS
+
+    let response = {
+      registros: lv_registros
+    };
+
+    return response
+
+  })
+
+  this.on('ExisteMaviRecuperacionLocalizacion', async function (req) {
+
+    let dbQuery = 'CALL "HDI_MAVIPOS1"."SPCXCPRELIMINARCTECTO"(' +
+      " OPCION => '6'," +
+      ' CLIENTE => ' + "'" + req.data.Cliente + "'" + ',' +
+      '	NOMBRE => ?,' +
+      '	DIRECCION => ?,' +
+      '	TELEFONO => ?,' +
+      '	CODIGO_POSTAL => ?,' +
+      '	IDCATALOGOTARJETAS => ?,' +
+      '	REGISTROS => ?,' +
+      ' RESPUESTAOUT => ?' +
+      ' )';
+
+    let result = await cds.run(dbQuery)
+    cds.log().info(result)
+
+    let lv_registros = result.REGISTROS
+
+    let response = {
+      registros: lv_registros
+    };
+
+    return response
+
+  })
+
+
+  this.on('GestorCobranza', async function (req) {
+
+    let dbQuery = 'CALL "HDI_MAVIPOS1"."SPCXCPRELIMINARCTECTO"(' +
+      " OPCION => '3'," +
+      ' CLIENTE => ' + "'" + req.data.Cliente + "'" + ',' +
+      '	NOMBRE => ?,' +
+      '	DIRECCION => ?,' +
+      '	TELEFONO => ?,' +
+      '	CODIGO_POSTAL => ?,' +
+      '	IDCATALOGOTARJETAS => ?,' +
+      '	REGISTROS => ?,' +
+      ' RESPUESTAOUT => ?' +
+      ' )';
+
+    let result = await cds.run(dbQuery)
+    cds.log().info(result)
+
+    let lv_registros = result.REGISTROS
+
+    let response = {
+      registros: lv_registros
+    };
+
+    return response
+
+  })
+
+  this.on('MaviRecuperacionAvalLocalizaciones', async function (req) {
+
+    let dbQuery = 'CALL "HDI_MAVIPOS1"."SPCXCPRELIMINARCTECTO"(' +
+      " OPCION => '7'," +
+      ' CLIENTE => ' + "'" + req.data.Cliente + "'" + ',' +
+      '	NOMBRE => ?,' +
+      '	DIRECCION => ?,' +
+      '	TELEFONO => ?,' +
+      '	CODIGO_POSTAL => ?,' +
+      '	IDCATALOGOTARJETAS => ?,' +
+      '	REGISTROS => ?,' +
+      ' RESPUESTAOUT => ?' +
+      ' )';
+
+    let result = await cds.run(dbQuery)
+    cds.log().info(result)
+
+    let lv_registros = result.REGISTROS
+
+    let response = {
+      registros: lv_registros
+    };
+
+    return response
+
+  })
+
+  this.on('MaviRecuperacionAvalLocalizaciones', async function (req) {
+
+    let dbQuery = 'CALL "HDI_MAVIPOS1"."SPCXCPRELIMINARCTECTO"(' +
+      " OPCION => '8'," +
+      ' CLIENTE => ' + "'" + req.data.Cliente + "'" + ',' +
+      '	NOMBRE => ?,' +
+      '	DIRECCION => ?,' +
+      '	TELEFONO => ?,' +
+      '	CODIGO_POSTAL => ?,' +
+      '	IDCATALOGOTARJETAS => ?,' +
+      '	REGISTROS => ?,' +
+      ' RESPUESTAOUT => ?' +
+      ' )';
+
+    let result = await cds.run(dbQuery)
+    cds.log().info(result)
+
+    let lv_nombre = result.NOMBRE
+
+    let response = {
+      NombreAgente: lv_nombre
+    };
+
+    return response
+
+  })
+
+
 }

@@ -20,5 +20,12 @@ context ext {
                 RES : String(30) @title: 'RES';
         };
 
+        @cds.persistence.exists
+        entity TablaStD {
+                TablaSt : String(50) not null  @title: 'TABLAST';
+                Nombre  : String(250) not null @title: 'NOMBRE';
+                Valor   : String(250)          @title: 'VALOR';
+        }
+
 
 }

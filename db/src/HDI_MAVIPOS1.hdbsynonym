@@ -4,5 +4,11 @@
       "object": "COMENTARIOS_COB",
       "schema": "MAVIPOS"
     }
+  },
+  "com.sap::APLICACIONES": {
+    "target": {
+      "object": "APLICACIONES",
+      "schema": "MAVIPOS"
+    }
   }
 }
